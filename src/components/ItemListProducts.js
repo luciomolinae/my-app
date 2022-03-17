@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ModalCustom from '../components/Modal';
+import rm from '../img/rm.jpg';
 
 
 export default function ImgMediaCard() {
@@ -39,7 +40,7 @@ export default function ImgMediaCard() {
         <Button size="small">Agregar al Carrito</Button>
         <Button onClick={handleOpen}>Ver Detalles</Button>
       <ModalCustom handleClose={handleClose} open={open}>
-        <img src='../img/rm.jpg'></img>
+        <img src={rm}></img>
       </ModalCustom>
 
       <ModalCustom handleClose={handleClose} open={open}>
