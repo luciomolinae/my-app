@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ModalCustom from '../components/Modal';
 import rm from '../img/rm.jpg';
+import ItemCount from './ItemCount';
 
 
 export default function ImgMediaCard() {
