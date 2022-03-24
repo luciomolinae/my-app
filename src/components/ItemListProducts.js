@@ -38,6 +38,7 @@ export default function ImgMediaCard() {
       </CardContent>
       <CardActions>
         <Button size="small">Agregar al Carrito</Button>
+         <ItemCount/>
         <Button onClick={handleOpen}>Ver Detalles</Button>
       <ModalCustom handleClose={handleClose} open={open}>
         <img src={rm}></img>
