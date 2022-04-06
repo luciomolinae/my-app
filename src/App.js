@@ -1,41 +1,24 @@
 
 import './App.css';
-
-
-// MUI import
-import Grid from '@mui/material/Grid';
-
-
-// Components import
-import Navbar from './components/NavBar';
-import ItemListProducts from './components/ItemListProducts';
-
-
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
-  
   return (
-    <div className="App">
-      <Navbar/>
-      <Grid mt={1} container spacing={12}>
-      <Grid item xs={3}>
-     <ItemListProducts/>
-      </Grid>
-        <Grid item xs={3}>
-        <ItemListProducts/>
-    </Grid>
-    <Grid item xs={3}>
-      <ItemListProducts/>
-    </Grid>
-    <Grid item xs={3}>
-    <ItemListProducts/>
-      </Grid>
-  </Grid>
-
-  
-      
-      
-    </div>
+    
+    <BrowserRouter>
+      <NavBar/>
+        <Routes>
+          <Route path='/contacto' element={<div><h1>Contacto</h1><h2>En desarrollo</h2></div>}/>
+          <Route path='/nosotros' element={<div><h1>Nosotros</h1><h2>En desarrollo</h2></div>}/>
+          <Route path='/productos' element={<ItemListContainer/>}/>
+          <Route path='/home' element={<ItemListContainer/>}/>
+          <Route path='/productos/:id' element={<ItemDetailContainer/>}/>
+        </Routes>
+    </BrowserRouter>
+    
   );
 }
 
