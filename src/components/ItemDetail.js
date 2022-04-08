@@ -20,12 +20,17 @@ const ItemDetail = ({}) => {
             }
         })
     }
+    const addProduct = (cant) => {
+        console.log(`Agregaste ${cant} camisetas`)
+    }
+
     return(
         <Container>
+           
             <h1>{data.title}</h1>
             <h2>${data.price}</h2>
-            <h3>Modelo: {data.modelo}</h3>
-            <ItemCount/>
+            <h3>Color: {data.color}</h3>
+            <ItemCount addProduct={addProduct}/>
         </Container>
     )
 }
